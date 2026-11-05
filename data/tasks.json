@@ -1,0 +1,91 @@
+{
+  "version": "0.1.0-placeholder",
+  "role": "placeholder",
+  "note": "Conjunto sintético para exercitar o runner no PR1. As referências ilustram o esquema e não são o gabarito do estudo (PR2). Não publicar métrica a partir destes pares. A categoria portuguese marca tarefas escritas em português; factual e reasoning estão em inglês.",
+  "tasks": [
+    {
+      "id": "fact-gold",
+      "category": "factual",
+      "language": "en",
+      "prompt": "What is the chemical symbol of gold? Reply with the symbol only.",
+      "reference": "Au"
+    },
+    {
+      "id": "fact-water-celsius",
+      "category": "factual",
+      "language": "en",
+      "prompt": "At standard atmospheric pressure, what is the boiling point of water in degrees Celsius? Reply with the number only.",
+      "reference": "100"
+    },
+    {
+      "id": "fact-brazil-independence",
+      "category": "factual",
+      "language": "en",
+      "prompt": "In which year did Brazil declare independence? Reply with the year only.",
+      "reference": "1822"
+    },
+    {
+      "id": "fact-closest-planet",
+      "category": "factual",
+      "language": "en",
+      "prompt": "Which planet is closest to the Sun? Reply with the name only.",
+      "reference": "Mercury"
+    },
+    {
+      "id": "reason-bat-ball",
+      "category": "reasoning",
+      "language": "en",
+      "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost, in dollars? Reply with a decimal number only.",
+      "reference": "0.05"
+    },
+    {
+      "id": "reason-larger-decimal",
+      "category": "reasoning",
+      "language": "en",
+      "prompt": "Which number is larger, 0.8 or 0.75? Reply with the number only.",
+      "reference": "0.8"
+    },
+    {
+      "id": "reason-syllogism",
+      "category": "reasoning",
+      "language": "en",
+      "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops lazzies? Reply yes or no.",
+      "reference": "yes"
+    },
+    {
+      "id": "reason-train-speed",
+      "category": "reasoning",
+      "language": "en",
+      "prompt": "A train travels 120 kilometers in 2 hours at constant speed. What is its average speed in kilometers per hour? Reply with the number only.",
+      "reference": "60"
+    },
+    {
+      "id": "pt-capital",
+      "category": "portuguese",
+      "language": "pt",
+      "prompt": "Qual é a capital do Brasil? Responda só com o nome da cidade.",
+      "reference": "Brasília"
+    },
+    {
+      "id": "pt-concordancia",
+      "category": "portuguese",
+      "language": "pt",
+      "prompt": "Corrija a frase, mudando só o que for preciso: \"Nós vai no mercado amanhã.\"",
+      "reference": "Nós vamos ao mercado amanhã."
+    },
+    {
+      "id": "pt-silogismo",
+      "category": "portuguese",
+      "language": "pt",
+      "prompt": "Se todo marciano é azul e todo azul é visível à noite, todo marciano é visível à noite? Responda sim ou não.",
+      "reference": "sim"
+    },
+    {
+      "id": "pt-semana",
+      "category": "portuguese",
+      "language": "pt",
+      "prompt": "Quantos dias tem uma semana comum? Responda só com o número.",
+      "reference": "7"
+    }
+  ]
+}
