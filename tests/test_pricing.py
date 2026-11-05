@@ -1,11 +1,20 @@
 """Contrato do custo: tabela citada, zero local, e None quando o modelo não tem preço."""
 
 from decimal import Decimal
+from pathlib import Path
 
 import pytest
 
 from llm_benchmark.config import load_provider_settings
-from llm_benchmark.pricing import PRICES, estimate_cost_usd, format_usd
+from llm_benchmark.errors import PriceTableError
+from llm_benchmark.pricing import (
+    PRICES,
+    ModelPrice,
+    estimate_cost_usd,
+    format_usd,
+    load_price_table,
+    overlay_prices,
+)
 
 
 def test_default_cloud_models_are_priced_and_sourced() -> None:
@@ -48,3 +57,37 @@ def test_negative_and_bool_tokens_are_rejected() -> None:
         estimate_cost_usd("gpt-5-mini", -1, 0)
     with pytest.raises(TypeError):
         estimate_cost_usd("gpt-5-mini", True, 0)  # noqa: FBT003
+
+
+def test_explicit_table_replaces_the_builtin_rates() -> None:
+    custom = {
+        "gpt-5-mini": ModelPrice(
+            input_usd_per_million=Decimal("1"),
+            output_usd_per_million=Decimal("0"),
+            source="local override",
+            note="teste",
+        )
+    }
+    assert estimate_cost_usd("gpt-5-mini", 1000, 500, prices=custom) == Decimal("0.001")
+    assert estimate_cost_usd("gemini-2.5-flash", 1_000_000, 0, prices=custom) is None
+    assert estimate_cost_usd("gpt-5-mini", 1000, 0, provider="local", prices=custom) == Decimal(0)
+
+
+def test_price_file_overlays_one_model_and_rejects_floats(tmp_path: Path) -> None:
+    path = tmp_path / "prices.json"
+    path.write_text(
+        '{"gpt-5-mini": {"input_usd_per_million": "1", "output_usd_per_million": "0"}}\n',
+        encoding="utf-8",
+    )
+    loaded = load_price_table(path)
+    merged = overlay_prices(loaded)
+    assert merged["gpt-5-mini"].input_usd_per_million == Decimal("1")
+    assert merged["gemini-2.5-flash"] == PRICES["gemini-2.5-flash"]
+    assert loaded["gpt-5-mini"].source == "local override"
+
+    path.write_text(
+        '{"gpt-5-mini": {"input_usd_per_million": 0.25, "output_usd_per_million": "1"}}\n',
+        encoding="utf-8",
+    )
+    with pytest.raises(PriceTableError, match="JSON float"):
+        load_price_table(path)

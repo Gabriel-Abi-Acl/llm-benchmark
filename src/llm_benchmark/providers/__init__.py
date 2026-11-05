@@ -25,24 +25,29 @@ def build_provider(
     *,
     env: Mapping[str, str] | None = None,
     client: Any = None,
+    model: str | None = None,
 ) -> LLMProvider:
-    """Monta o adaptador. Não abre conexão; `client` existe para o teste injetar um duplo."""
+    """Monta o adaptador. Não abre conexão; `client` existe para o teste injetar um duplo.
+
+    `model` troca o id desta execução. A chave continua vindo do ambiente.
+    """
     settings = load_provider_settings(name, env)
+    chosen = model.strip() if model is not None and model.strip() else settings.model
     key = name.strip().lower()
     if key == "openai":
-        return OpenAIProvider(api_key=settings.api_key, model=settings.model, client=client)
+        return OpenAIProvider(api_key=settings.api_key, model=chosen, client=client)
     if key == "gemini":
-        return GeminiProvider(api_key=settings.api_key, model=settings.model, client=client)
+        return GeminiProvider(api_key=settings.api_key, model=chosen, client=client)
     if key == "deepseek":
         return DeepSeekProvider(
             api_key=settings.api_key,
-            model=settings.model,
+            model=chosen,
             base_url=settings.base_url,
             client=client,
         )
     if key == "local":
         base_url = settings.base_url or "http://127.0.0.1:11434"
-        return LocalProvider(model=settings.model, base_url=base_url, client=client)
+        return LocalProvider(model=chosen, base_url=base_url, client=client)
     if key == "fake":
-        return FakeProvider(model=settings.model)
+        return FakeProvider(model=chosen)
     raise UnknownProviderError(name)
