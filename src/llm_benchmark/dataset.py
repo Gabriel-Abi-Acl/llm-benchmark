@@ -1,6 +1,6 @@
-"""Carrega o conjunto de tarefas sintéticas.
+"""Carrega o placeholder que o runner executa.
 
-O arquivo valida o esquema. A referência, quando existe, não é pontuada neste PR.
+O gabarito fechado mora em `eval_dataset`. A referência deste arquivo não entra em métrica.
 """
 
 import json
@@ -17,7 +17,7 @@ _REQUIRED = ("id", "category", "language", "prompt")
 
 @dataclass(frozen=True)
 class Task:
-    """Uma tarefa. `reference` é ilustrativa até o gabarito do PR2."""
+    """Uma tarefa do placeholder. `reference` ilustra o esquema; o gabarito do estudo é o v1."""
 
     id: str
     category: str

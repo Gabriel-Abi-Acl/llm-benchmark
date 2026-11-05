@@ -1,0 +1,52 @@
+{"id": "fact-gold-symbol", "prompt": "What is the chemical symbol of gold? Reply with the symbol only.", "reference_answer": "Au", "type": "factual"}
+{"id": "fact-water-boiling-c", "prompt": "At standard atmospheric pressure, what is the boiling point of water in degrees Celsius? Reply with the number only.", "reference_answer": "100", "type": "factual"}
+{"id": "fact-brazil-independence", "prompt": "In which year did Brazil declare independence from Portugal? Reply with the year only.", "reference_answer": "1822", "type": "factual"}
+{"id": "fact-closest-planet", "prompt": "Which planet in the Solar System is closest to the Sun? Reply with the name only.", "reference_answer": "Mercury", "type": "factual"}
+{"id": "fact-water-formula", "prompt": "What is the chemical formula of water? Reply with the formula only.", "reference_answer": "H2O", "type": "factual", "notes": "ASCII, sem subscrito: H2O."}
+{"id": "fact-earth-moon", "prompt": "What is the name of Earth's only natural satellite? Reply with the name only.", "reference_answer": "Moon", "type": "factual"}
+{"id": "fact-triangle-sum", "prompt": "What is the sum of the interior angles of a Euclidean triangle, in degrees? Reply with the number only.", "reference_answer": "180", "type": "factual"}
+{"id": "fact-oxygen-symbol", "prompt": "What is the chemical symbol of oxygen? Reply with the symbol only.", "reference_answer": "O", "type": "factual"}
+{"id": "fact-week-days", "prompt": "How many days are in a common week? Reply with the number only.", "reference_answer": "7", "type": "factual"}
+{"id": "fact-speed-of-light", "prompt": "Since the 1983 SI definition, what is the exact speed of light in vacuum in meters per second? Reply with the integer only.", "reference_answer": "299792458", "type": "factual", "notes": "Inteiro definido pelo SI em 1983, não um arredondamento experimental."}
+{"id": "fact-smallest-prime", "prompt": "What is the smallest prime number? Reply with the number only.", "reference_answer": "2", "type": "factual"}
+{"id": "fact-hexagon-sides", "prompt": "How many sides does a hexagon have? Reply with the number only.", "reference_answer": "6", "type": "factual"}
+{"id": "reason-bat-ball", "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost, in dollars? Reply with a decimal number only.", "reference_answer": "0.05", "type": "reasoning"}
+{"id": "reason-larger-decimal", "prompt": "Which number is larger, 0.8 or 0.75? Reply with the number only.", "reference_answer": "0.8", "type": "reasoning"}
+{"id": "reason-syllogism", "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops lazzies? Reply yes or no.", "reference_answer": "yes", "type": "reasoning"}
+{"id": "reason-train-speed", "prompt": "A train travels 120 kilometers in 2 hours at constant speed. What is its average speed in kilometers per hour? Reply with the number only.", "reference_answer": "60", "type": "reasoning"}
+{"id": "reason-next-power", "prompt": "The sequence is 2, 4, 8, 16. Each term doubles the previous one. What is the next number? Reply with the number only.", "reference_answer": "32", "type": "reasoning"}
+{"id": "reason-turn-around", "prompt": "You face north and turn 180 degrees. Which cardinal direction do you face? Reply with the name only.", "reference_answer": "south", "type": "reasoning"}
+{"id": "reason-all-red", "prompt": "All of the widgets in a closed box are red. Is every widget in that box red? Reply yes or no.", "reference_answer": "yes", "type": "reasoning"}
+{"id": "reason-age-sum", "prompt": "Ana is 4 years older than Bia. Bia is 6. How old is Ana? Reply with the number only.", "reference_answer": "10", "type": "reasoning"}
+{"id": "reason-even-sum", "prompt": "The integers 2 and 4 are both even. Is their sum even? Reply yes or no.", "reference_answer": "yes", "type": "reasoning"}
+{"id": "reason-subset", "prompt": "Set A is {1, 2}. Is 2 an element of A? Reply yes or no.", "reference_answer": "yes", "type": "reasoning"}
+{"id": "reason-contradiction", "prompt": "In classical logic, can a statement be both true and false at the same time? Reply yes or no.", "reference_answer": "no", "type": "reasoning"}
+{"id": "reason-faster", "prompt": "Car A travels 100 km in 2 hours. Car B travels 100 km in 4 hours. Which car has the higher average speed? Reply A or B.", "reference_answer": "A", "type": "reasoning"}
+{"id": "pt-capital-brasil", "prompt": "Qual é a capital do Brasil? Responda só com o nome da cidade.", "reference_answer": "Brasília", "type": "portuguese"}
+{"id": "pt-concordancia", "prompt": "Corrija a frase, mudando só o que for preciso: \"Nós vai no mercado amanhã.\"", "reference_answer": "Nós vamos ao mercado amanhã.", "type": "portuguese", "notes": "A correção troca o verbo e a regência (vai/no) e mantém o resto da frase."}
+{"id": "pt-silogismo", "prompt": "Se todo marciano é azul e todo azul é visível à noite, todo marciano é visível à noite? Responda sim ou não.", "reference_answer": "sim", "type": "portuguese"}
+{"id": "pt-dias-semana", "prompt": "Quantos dias tem uma semana comum? Responda só com o número.", "reference_answer": "7", "type": "portuguese"}
+{"id": "pt-capital-portugal", "prompt": "Qual é a capital de Portugal? Responda só com o nome da cidade.", "reference_answer": "Lisboa", "type": "portuguese"}
+{"id": "pt-plural-cidadao", "prompt": "Qual é o plural de \"cidadão\"? Responda só com a palavra.", "reference_answer": "cidadãos", "type": "portuguese"}
+{"id": "pt-verbo-ser", "prompt": "Complete com a forma correta do verbo ser: \"Eu ___ brasileiro.\" Responda só com o verbo.", "reference_answer": "sou", "type": "portuguese"}
+{"id": "pt-artigo-agua", "prompt": "Complete com o artigo definido em minúscula: \"___ água está fria.\" Responda só com o artigo.", "reference_answer": "a", "type": "portuguese"}
+{"id": "pt-independencia", "prompt": "Em que ano o Brasil declarou independência? Responda só com o ano.", "reference_answer": "1822", "type": "portuguese"}
+{"id": "pt-maior", "prompt": "Qual número é maior, 3 ou 8? Responda só com o número.", "reference_answer": "8", "type": "portuguese"}
+{"id": "pt-bom-dia", "prompt": "Qual é a saudação usual em português do Brasil para \"good morning\"? Responda só com a saudação, com a primeira palavra em maiúscula.", "reference_answer": "Bom dia", "type": "portuguese", "notes": "Forma canônica com inicial maiúscula. Este arquivo não lista variante em minúscula."}
+{"id": "pt-antonimo-quente", "prompt": "Qual é o antônimo usual de \"quente\" quando se fala de temperatura? Responda só com a palavra.", "reference_answer": "frio", "type": "portuguese"}
+{"id": "num-add", "prompt": "Compute 17 + 28. Reply with the number only.", "reference_answer": "45", "type": "numeric"}
+{"id": "num-mul", "prompt": "Compute 12 * 12. Reply with the number only.", "reference_answer": "144", "type": "numeric"}
+{"id": "num-percent", "prompt": "What is 15 percent of 200? Reply with the number only.", "reference_answer": "30", "type": "numeric"}
+{"id": "num-div", "prompt": "Compute 144 / 12. Reply with the number only.", "reference_answer": "12", "type": "numeric"}
+{"id": "num-mean", "prompt": "What is the arithmetic mean of 2, 4, 6 and 8? Reply with the number only.", "reference_answer": "5", "type": "numeric"}
+{"id": "num-fraction", "prompt": "Compute 1/2 + 1/4 as a decimal. Reply with the decimal only.", "reference_answer": "0.75", "type": "numeric", "notes": "O enunciado pede decimal. 3/4 não é o gabarito deste item."}
+{"id": "num-km-m", "prompt": "Convert 3.5 kilometers to meters. Reply with the number only.", "reference_answer": "3500", "type": "numeric"}
+{"id": "num-hours-min", "prompt": "How many minutes are in 3 hours? Reply with the number only.", "reference_answer": "180", "type": "numeric"}
+{"id": "num-precedence", "prompt": "Compute 2 + 3 * 4 using standard operator precedence. Reply with the number only.", "reference_answer": "14", "type": "numeric"}
+{"id": "num-negative", "prompt": "Compute -7 + 10. Reply with the number only.", "reference_answer": "3", "type": "numeric"}
+{"id": "unans-missing-city", "prompt": "What is the population of the city named in the previous sentence? Reply with the number only.", "reference_answer": null, "type": "unanswerable", "notes": "O prompt não nomeia cidade nem traz uma frase anterior. Sem esse dado a pergunta não tem resposta."}
+{"id": "unans-private-key", "prompt": "What is the API key written in the author's private notebook? Reply with the key only.", "reference_answer": null, "type": "unanswerable", "notes": "Dado privado que não está no prompt. O gabarito não existe e não deve ser inventado."}
+{"id": "unans-next-close", "prompt": "What will the closing price of the fictional ticker ZZZZ be on the next trading day? Reply with the price only.", "reference_answer": null, "type": "unanswerable", "notes": "Preço futuro não está determinado pelo enunciado. O ticker é fictício de propósito."}
+{"id": "ambig-bank-length", "prompt": "How long is a bank? Reply with a number and a unit.", "reference_answer": null, "type": "ambiguous", "notes": "\"Bank\" pode ser margem de rio ou instituição financeira. Nenhuma das leituras tem comprimento único."}
+{"id": "ambig-nearest-city", "prompt": "What is the nearest large city? Reply with the city name only.", "reference_answer": null, "type": "ambiguous", "notes": "Não há ponto de origem. Várias cidades satisfazem a pergunta."}
+{"id": "ambig-numeric-date", "prompt": "Write today's date using only numbers.", "reference_answer": null, "type": "ambiguous", "notes": "Faltam o dia de calendário e a ordem (dia-mês ou mês-dia). Mais de uma string numérica é defensável."}
