@@ -1,7 +1,7 @@
 {
   "version": "0.1.0-placeholder",
   "role": "placeholder",
-  "note": "Conjunto sintético para exercitar o runner no PR1. As referências ilustram o esquema e não são o gabarito do estudo (PR2). Não publicar métrica a partir destes pares. A categoria portuguese marca tarefas escritas em português; factual e reasoning estão em inglês.",
+  "note": "Conjunto sintético para exercitar o runner no PR1. As referências ilustram o esquema deste arquivo e não são o gabarito. O conjunto fechado está em data/eval/tasks.v1.jsonl. Não publicar métrica a partir destes pares. A categoria portuguese marca tarefas escritas em português; factual e reasoning estão em inglês.",
   "tasks": [
     {
       "id": "fact-gold",
