@@ -353,6 +353,13 @@ def test_local_missing_token_count_is_rejected() -> None:
         provider.complete(LLMRequest(prompt="oi"))
 
 
+def test_build_provider_model_override_wins_over_env() -> None:
+    overridden = build_provider("fake", env={"FAKE_MODEL": "from-env"}, model="from-flag")
+    assert overridden.model == "from-flag"
+    fallback = build_provider("fake", env={}, model="  ")
+    assert fallback.model == "fake-echo"
+
+
 def test_local_builds_ollama_client_with_host(monkeypatch: pytest.MonkeyPatch) -> None:
     created: dict[str, object] = {}
 

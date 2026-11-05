@@ -44,3 +44,7 @@ class ProviderResponseError(LLMBenchmarkError):
 
 class DatasetError(LLMBenchmarkError):
     """Conjunto de tarefas ilegível ou fora do esquema mínimo."""
+
+
+class PriceTableError(LLMBenchmarkError):
+    """Tabela de preços ilegível, ou tarifa que não dá para ler como decimal."""
